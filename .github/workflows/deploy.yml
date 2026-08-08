@@ -12,8 +12,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Install and Build
-        uses: withastro/action@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        # This is the CRITICAL fix for the ERESOLVE error
+        run: npm install --legacy-peer-deps
+
+      - name: Build
+        # This generates the static HTML files
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
