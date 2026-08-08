@@ -1,0 +1,40 @@
+{
+  "name": "Mahesh Chanda",
+  "title": "AWS DevOps & Site Reliability Engineer",
+  "location": "United States",
+  "email": "chandamaheshh@gmail.com",
+  "summary": "DevOps and SRE with expertise building scalable, secure cloud infrastructure on AWS and Azure. Specializing in IaC (Terraform), Kubernetes orchestration, and automated CI/CD reducing manual intervention by up to 70%.",
+  "stats": [
+    { "label": "Manual Task Reduction", "value": "70%" },
+    { "label": "Deployment Speed Incr.", "value": "60%" },
+    { "label": "Infrastructure", "value": "AWS/Azure" }
+  ],
+  "skills": {
+    "Cloud": ["AWS (EKS, Lambda, S3)", "Azure (AKS, App Gateway)", "GCP"],
+    "IaC & Automation": ["Terraform", "Ansible", "CloudFormation", "Pulumi"],
+    "CI/CD": ["Argo CD", "Jenkins", "GitHub Actions", "TeamCity"],
+    "Observability": ["Prometheus", "Grafana", "ELK Stack", "Splunk", "Dynatrace"]
+  },
+  "experience": [
+    {
+      "company": "Salesforce",
+      "role": "AWS DevOps Engineer / SRE",
+      "period": "Sept 2025 – Present",
+      "highlights": [
+        "Automated AWS provisioning using Terraform/Ansible, reducing manual intervention by 70%.",
+        "Optimized CI/CD via TeamCity and Argo CD for high-availability media workloads.",
+        "Managed EKS clusters using Helm and GitOps practices for seamless rollbacks."
+      ]
+    },
+    {
+      "company": "TIAA",
+      "role": "Site Reliability Engineer / AWS DevOps",
+      "period": "Jan 2024 – Sept 2025",
+      "highlights": [
+        "Modernized CI/CD pipelines, reducing deployment frequency bottlenecks by 60%.",
+        "Built serverless architectures (Lambda, API Gateway) for event-driven financial workloads.",
+        "Integrated Prometheus/Grafana for proactive incident detection and system observability."
+      ]
+    }
+  ]
+}
