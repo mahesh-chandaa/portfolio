@@ -45,6 +45,7 @@
         "Designed hands-on lab exercises introducing core DBMS concepts, including ACID properties, primary/foreign key constraints, and basic CRUD operations.",
         "Mentored students on data manipulation projects, teaching core libraries like pandas and csv to read, clean, and transform structured datasets.",
         "Maintained dockerized SQL lab environments (PostgreSQL/MySQL), ensuring reliable student access to pre-configured database instances for weekly lab assignments."
+      ]
     },
     {
       "company": "LG Electronics",
