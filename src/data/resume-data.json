@@ -37,11 +37,21 @@
       ]
     },
     {
+     "company": "Southern Arkansas University (USA)",
+      "role": "Student Research Assistant",
+      "period": "Jan 2023 – Dec 2023",
+      "highlights": [
+        "Graded and provided detailed code reviews for 100+ SQL assignments, helping students optimize query logic, identify missing indexes, and understand execution plan basics",
+        "Designed hands-on lab exercises introducing core DBMS concepts, including ACID properties, primary/foreign key constraints, and basic CRUD operations.",
+        "Mentored students on data manipulation projects, teaching core libraries like pandas and csv to read, clean, and transform structured datasets.",
+        "Maintained dockerized SQL lab environments (PostgreSQL/MySQL), ensuring reliable student access to pre-configured database instances for weekly lab assignments."
+    },
+    {
       "company": "LG Electronics",
       "role": "Build & Release Engineer",
       "period": "May 2021 – Jul 2022",
       "highlights": [
-        "Infrastructure-as-Code provisioning of Azure VMs, secure storage accounts, and AKS environments (Terraform & ARM)",
+        "Infrastructure-as-Code provisioning of Azure VMs, secure storage accounts, and AKS environments (Terraform & ARM).",
         "Creation of Helm charts to support complex release models (canary rollouts, blue/green deployments) for mission-critical payment APIs.",
         "Integration of SonarQube and Snyk (SCA) into active builds for early identification of static vulnerabilities."
       ]
