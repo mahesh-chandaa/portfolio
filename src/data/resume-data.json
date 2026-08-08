@@ -44,6 +44,7 @@
         "Infrastructure-as-Code provisioning of Azure VMs, secure storage accounts, and AKS environments (Terraform & ARM)",
         "Creation of Helm charts to support complex release models (canary rollouts, blue/green deployments) for mission-critical payment APIs.",
         "Integration of SonarQube and Snyk (SCA) into active builds for early identification of static vulnerabilities."
-    }
+      ]
+     }
   ]
 }
