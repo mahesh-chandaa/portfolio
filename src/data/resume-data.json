@@ -35,7 +35,7 @@
         "Built serverless architectures (Lambda, API Gateway) for event-driven financial workloads.",
         "Integrated Prometheus/Grafana for proactive incident detection and system observability."
       ]
-    }
+    },
     {
       "company": "LG Electronics",
       "role": "Build & Release Engineer",
