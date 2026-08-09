@@ -3,6 +3,7 @@
   "title": "AWS DevOps & Site Reliability Engineer",
   "location": "United States",
   "email": "chandamaheshh@gmail.com",
+  "resumeLink": "Mahesh_Lebenslauf.pdf",
   "summary": "DevOps and SRE with expertise building scalable, secure cloud infrastructure on AWS and Azure. Specializing in IaC (Terraform), Kubernetes orchestration, and automated CI/CD reducing manual intervention by up to 70%.",
   "stats": [
     { "label": "Manual Task Reduction", "value": "70%" },
