@@ -1,12 +1,5 @@
 ---
-// The code between these triple-dashes runs on the server during build
 import data from '../data/resume-data.json';
-
-
-// SRE Safety Check: If data fails to import, the build will tell us here
-if (!data) {
-  throw new Error("SRE CRITICAL: Data could not be loaded from resume-data.json");
-}
 ---
 
 <html lang="en">
@@ -14,10 +7,40 @@ if (!data) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{data.name} | Portfolio</title>
-    <!-- Tailwind CDN for safety -->
+    
+    <!-- This is the most reliable way to get Tailwind working on GitHub Pages -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+      // Configure Tailwind to recognize your specific colors and dark mode
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                950: '#020617',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-slate-950 text-slate-200 font-sans;
+        }
+      }
+
+      /* Professional SRE Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #020617; }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans">
+<body>
     <main class="max-w-4xl mx-auto px-6 py-20">
         
         <header class="mb-16">
@@ -42,8 +65,8 @@ if (!data) {
 
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {data.stats.map((stat) => (
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
-                    <p class="text-slate-500 text-sm uppercase mb-2">{stat.label}</p>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                    <p class="text-slate-500 text-sm uppercase tracking-widest mb-2">{stat.label}</p>
                     <p class="text-3xl font-bold text-white">{stat.value}</p>
                 </div>
             ))}
@@ -51,7 +74,7 @@ if (!data) {
 
         <section class="mb-20">
             <h2 class="text-2xl font-bold text-white mb-10 flex items-center">
-                <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Experience
+                <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Professional Experience
             </h2>
             <div class="space-y-12">
                 {data.experience.map((job) => (
@@ -61,8 +84,8 @@ if (!data) {
                         <p class="text-blue-400 font-mono text-sm mb-4">{job.company} | {job.period}</p>
                         <ul class="space-y-3">
                             {job.highlights.map((point) => (
-                                <li class="text-slate-400 flex items-start">
-                                    <span class="text-blue-500 mr-2">▹</span> {point}
+                                <li class="text-slate-400 flex items-start leading-relaxed">
+                                    <span class="text-blue-500 mr-2 mt-1">▹</span> {point}
                                 </li>
                             ))}
                         </ul>
@@ -73,15 +96,15 @@ if (!data) {
 
         <section>
             <h2 class="text-2xl font-bold text-white mb-10 flex items-center">
-                <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Skills
+                <span class="w-8 h-[2px] bg-blue-500 mr-4"></span> Technical Arsenal
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {Object.entries(data.skills).map(([category, list]) => (
-                    <div>
+                    <div class="bg-slate-900/50 border border-slate-800 p-6 rounded-xl">
                         <h4 class="text-slate-300 font-bold mb-4 uppercase text-xs tracking-widest">{category}</h4>
                         <div class="flex flex-wrap gap-2">
                             {list.map((skill) => (
-                                <span class="bg-slate-900 border border-slate-800 px-3 py-1 rounded text-sm text-slate-400">
+                                <span class="bg-slate-900 border border-slate-700 px-3 py-1 rounded text-sm text-slate-300">
                                     {skill}
                                 </span>
                             ))}
@@ -90,27 +113,6 @@ if (!data) {
                 ))}
             </div>
         </section>
-
     </main>
 </body>
 </html>
-<style is:global>
-  /* PASTE YOUR STYLES HERE */
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #020617; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #1e293b;
-    border-radius: 10px;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
